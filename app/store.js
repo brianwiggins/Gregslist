@@ -1,15 +1,19 @@
 import Car from "./Models/Car.js";
+import Job from "./Models/Job.js";
 
 let _state = {
   /** @type {Car[]} */
-  cars: []
+  cars: [],
+  /**@type {Job[]} */
+  jobs: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
-  cars: []
+  cars: [],
+  jobs:[]
 };
 
 //NOTE You should not need to change the code from this point down
@@ -53,7 +57,6 @@ class Store {
     _validateProp(prop);
     _validateSubscriber(fn, prop);
     _listeners[prop].push(fn);
-    debugger;
   }
 
   /**
