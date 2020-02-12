@@ -4,7 +4,7 @@ import Job from "../Models/Job.js";
 //@ts-ignore
 let _api = axios.create({
   baseURL:"https://bcw-gregslist.herokuapp.com/api/jobs",
-  timeout:3000
+  timeout:5000
 });
 
 class JobsService {
